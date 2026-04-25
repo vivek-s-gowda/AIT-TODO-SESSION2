@@ -1,0 +1,9 @@
+.item-container {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
