@@ -7,3 +7,11 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.add-laylout {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 16px;
+  width: 300px;
+}

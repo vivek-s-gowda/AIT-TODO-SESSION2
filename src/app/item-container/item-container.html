@@ -1,6 +1,10 @@
 <div class="item-container">
   <h2>Todo List</h2>
+  <div class="add-laylout">
+    <input type="text" [(ngModel)]="todo" id="" />
+    <button (click)="addTodo()">Add</button>
+  </div>
   <div class="list" *ngFor="let value of values">
-    <app-items [value]="value"></app-items>
+    <app-items [value]="value" (onChecked)="removeItem($event)"></app-items>
   </div>
 </div>

@@ -1,15 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output, output } from "@angular/core";
 
 @Component({
-  selector: 'app-items',
+  selector: "app-items",
   imports: [],
-  templateUrl: './items.html',
-  styleUrl: './items.css',
+  templateUrl: "./items.html",
+  styleUrl: "./items.css",
 })
 export class Items {
   @Input() value: { id: number; name: string; checked: boolean } = {
     id: 0,
-    name: '',
+    name: "",
     checked: false,
   };
+  @Output() onChecked = new EventEmitter<number>();
+  remove() {
+    this.onChecked.emit(this.value.id);
+  }
 }

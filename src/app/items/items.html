@@ -1,4 +1,10 @@
 <div class="item">
-  <input type="checkbox" name="" id="" [checked]="value.checked" />
+  <input
+    type="checkbox"
+    name=""
+    id=""
+    [checked]="value.checked"
+    (change)="remove()"
+  />
   <span>{{ value.name }}</span>
 </div>
